@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    max-width: 100vw;
+    width: 100%;
+}
+
+body{
+    display: grid;
+    grid-template: "header"
+                    "main" 
+                    "footer"
+                    ;
+    color: rgb(8, 8, 70)
+
+}
+
+/* @media screen and (min-width: 300px){ */
+    header{
+        grid-area: header;
+        margin: 0 0 0px 0;
+        width: 100%;
+        height: max-content;
+        background-color: green;
+        display: grid;
+        grid-template: "social-nav" 
+                       "heading"
+                       "hero-image"
+                       "text-over-hero"
+                       "main-nav" 
+                       ;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    #social_nav_header{ 
+        grid-area: social-nav;
+        width: 100px;
+        height: 30px;
+        display: grid;
+        justify-self: right;
+        align-content: center;
+        grid-template: 
+        "call whats-app facebook";
+    }
+
+    .call {
+        grid-area: call;
+    }
+
+    .whatsapp {
+        grid-area: whats-app;
+    }
+
+    .facebook {
+        grid-area: facebook;
+    }
+
+    h1{ 
+        grid-area: heading;
+    }
+
+    .hero{
+        grid-area: hero-image;
+    }
+
+    .div-over-hero {
+        grid-area: text-over-hero;
+        position: absolute;
+        top: 165px;
+        right: 50px;
+        z-index: 2;
+        color: white;
+        font-weight: bold;
+        font-size: 3em;
+    }
+
+
+    .navigation{ 
+        grid-area: main-nav; 
+        position: relative;
+        z-index: 2;
+        height: max-content;
+        width: max-content;
+        bottom: 25px;
+        left: 55%;
+        background-color: rgba(255, 0, 0, 0.911);
+        padding: 10px;
+    }
+
+    .navigation a {
+        text-decoration: none;
+        color: white;
+        font-size:1em;
+    }
+
+    .nav-blog {
+        padding-left: .6em;
+        border-left: 2px solid white;
+    }
+
+    .nav-about {
+        padding-right: .5em;
+    }
+
+    h1{
+        color: ivory;
+        display: grid;
+        justify-items: center;
+        padding-bottom: 10px;
+    }
+
+    .sub-heading{
+        color: rgb(80, 36, 21);
+        font-size: .6em;
+    }
+
+    .hero img{
+        border-radius: 10%;
+    }
+
+    main{
+            display: grid;
+            width: 100%;
+            grid-template: "search"
+                           "blogpost" 
+                           "downloads"
+                           " youtube "
+                           ;
+    }
+    .search{
+        grid-area: search;
+        display: grid;
+        grid-template: "search-area form"
+                        /auto;
+    }
+
+    #blog-post{
+        grid-area: blogpost;
+        padding: 40px 0 0 10px;
+        
+    }
+    .h2{
+        margin: 0 0 -25px 0;
+    }
+    .home-blog{
+        margin: 40px 0 0 0;
+        background-color: rgb(233, 227, 227);
+        border-radius: 6px;
+    }
+    .blog-caption{
+        color: goldenrod;
+        text-align: center;
+    }
+    p{
+        margin: 3px 0 0 3px;
+    }
+
+    .search{
+        grid-area: search;
+        margin: 40px 0 0 0px;
+    }
+    .search-text {
+        font-size: x-large;
+        margin: 0px 0 0 10px;
+        
+    }
+
+    input{
+        width: 150px;
+        margin: 11px 0 0 10px;
+        background-color: rgb(233, 227, 227);
+        border: none;
+        height: 20px;
+    }
+
+    .downloads{
+        grid-area:  downloads ;
+        background-color: rgba(255, 68, 0, 0.904);
+        margin: 20px 0 0 0
+    }
+    .download-text{
+        background-color: rgb(57, 221, 57);
+        color: white;
+        width: 150px;
+        font-size: larger;
+        text-align: center;
+        margin: 50px 0 0 100px
+    }
+    .download-icons{
+        display: grid;
+        grid-template: " pdf audio";
+        margin: 15px 0 0 10px;
+    }
+    .download-image1{
+        grid-area: pdf;
+        width: 100px;
+        padding: 0 0 0 60px
+    }
+    .download-image2{
+        grid-area: audio;
+        width: 130px;
+        padding: 0 20px 20px 0
+    }
+    .youtube-videos{
+        grid-area: youtube ;
+        margin: 50px 5px 0 10px;
+    }
+    .youtube-text{
+        font-size: large;
+        margin: 0 0 0 40px;
+    }
+    .icon-youtube{
+        width: 70px;
+        margin: 10px 70px 30px 5px;
+    }
+   
+    .videos{
+        margin: 0 0 0 50px;
+        width: 80%;
+    }
+    footer {
+        background-color: rgb(165, 165, 165);
+        height: 170px;
+        margin: 30px 0 0 0;
+        width: 420px;
+    }
+    .footer-design{
+        padding: 0 0 10px 0;
+        height: 15px;
+        background-color: rgb(165, 165 165);
+        width: 420px;
+      
+    }
+    .footer-nav{
+        display: grid;
+        grid-template: "footer-home footer-about footer-blog";
+        padding-left: 80px;
+        width: 200px;
+    }
+    .footer-home{
+        grid-area: footer-home;
+        text-decoration: none;
+        border-right: 2px solid black;
+        width: 70%;
+        font-size: smaller;
+        margin-right: 50px;
+        color: white;
+    }
+    .footer-about{
+        grid-area: footer-about;
+        text-decoration: none;
+        border-right: 2px solid black;
+        width: 70%;
+        color: white;
+        margin-right: 50px;
+        font-size: smaller
+        
+    }
+    .footer-blog{
+        grid-area: footer-blog;
+        text-decoration: none;
+        color: white;
+        font-size: smaller
+    }
+    #social_nav_footer{
+        display: grid;
+        grid-template: "call whatssap faacebook";
+      justify-self: center;
+        width: 30%;
+        margin: 10px  0 0 145px;
+    }
+    
+    .calll{
+        grid-area: call;
+        width: 20px;
+    }
+    
+    .whatssap{
+        grid-area: whatssap;
+        width: 20px;
+    }
+    
+    .faceboook{
+        grid-area: faacebook;
+        width: 20px;
+    }
+    
+    .copywright{
+        font-size: x-small;
+        padding: 20px 0 10px 40px;
+        color: white;
+    }
+    @media screen and ( min-width:500px){
+        body{
+            width: 100%;
+            max-width: 100vw;
+        }
+        
+        .navigation{
+            left: 67%;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            font-size:1.5em;
+        }
+
+        .div-over-hero{
+            font-size: 6em;
+            right: 120px;
+            top: 250px;
+            color: rgba(255, 255, 255, 0.788);
+        }
+
+        main{
+           display: grid;
+           grid-template: "search search"
+                          "blog   blog"
+                          "downloads downloads"
+                          "youtube youtube";
+        }
+
+        .search{
+            grid-area: search;
+            display: grid;
+            grid-template: "search-area form"
+                            /auto;
+        }
+
+        .search-area{
+            grid-area: search-area;
+            width: 100%;
+            font-size: xx-large;
+            margin: -5px 0 0 15px;
+        }
+
+        .search-text{
+            font-size: xx-large;
+        }
+        .title{
+            margin: 15px 0 0 20px;
+        }
+        input{
+            padding: 0;
+            margin: 0;
+            height: 30px;
+            width:300px;
+        }
+        .h4{
+            margin: 0 0 0 50px;
+            font-size: xx-large;
+        }
+        #MONTH, #DAY{
+            margin:15px 0 0 20px;
+        }
+        
+        .form{
+            grid-area: form;
+            margin: 0 0 0 -200px;
+        }
+        form{
+            display: grid;
+            grid-template: "h4 year month day ";
+            margin: 0;
+        }
+
+        #blog-post{
+            grid-area: blog;
+        }
+
+        .downloads{
+            grid-area: downloads;
+            margin: 40px 0 0 0px  ;
+            align-items: center;
+            background-color: rgba(255, 68, 0, 0.904);
+            padding: 0 0 0 200px;
+        }
+        .download-icons {
+            width: 200px;
+        }
+
+        .download-image2{
+            margin: 0;
+        }
+
+        .youtube-videos{
+            grid-area: youtube;
+            margin-left: 21px;
+        }
+        .icon-youtube{
+            width: 100px;
+            margin: 10px 90px 30px 5px;
+        }
+    
+        
+    
+    footer{
+        width: 100%;
+    }
+    .footer-design{
+        width: 100%;
+    }
+
+    #social_nav_footer{
+    width: 35%;
+    padding: 20px 0 0 110px;
+    }
+
+    .footer-nav{
+    width: 70%;
+    padding: 0 0 0 120px;
+    }
+
+    .copywright{
+    padding: 20px 0 0 120px;
+    }
+
+}
+
+@media screen and (min-width: 1100px){
+
+    .hero img{
+        
+        height: 400px;
+    }
+
+    .icon-youtube{
+        margin: 10px 60px 30px 5px;
+    }
+    #blog-post{
+        display: grid;
+        grid-template: "caption caption caption"
+                       "blog1 blog2 blog3"
+                       "blog4 blog5 blog6";
+    }
+
+    .h2{
+        grid-area:caption;
+    }
+    .home-blog{
+        width: 90%;
+
+     } 
+
+    .footer-nav{
+        width: 70%;
+        padding: 0 400px 0 300px;
+    }
+    #social_nav_footer{
+        display: grid;
+        grid-template: "call whatssap faacebook";
+        justify-self: center;
+        padding:30px 0 0 370px;
+        width: 35%;
+    }
+    .footer-home{
+        width: 70%;
+        padding: 0 0px 0 0;
+        margin-right: 0;
+    }
+    .footer-about{
+        width: 70%;
+        margin-right: 30px;    
+    }
+    .footer-blog{
+        grid-area: footer-blog;
+        text-decoration: none;
+        color: white;
+        font-size: smaller
+    }
+    .copywright{
+        padding: 20px 0 0 290px;
+        }
+    
+}
+    
+
+
+

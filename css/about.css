@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    max-width: 100vw;
+    width: 100%;
+}
+
+body{
+    display: grid;
+    grid-template: "header"
+                    "main" 
+                    "footer"
+                    ;
+    color: rgb(8, 8, 70)
+}
+header{
+    grid-area: header;
+    margin: 0 0 0px 0;
+    width: 100%;
+    max-width: 100vw;
+    height: 100px;
+    background-color: green;
+    display: grid;
+    grid-template: "social-nav" 
+                   "heading"
+                   "main-nav" 
+                   ;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+#social_nav_header{ 
+    grid-area: social-nav;
+    width: 100px;
+    height: 30px;
+    display: grid;
+    justify-self: right;
+    align-content: center;
+    grid-template: 
+    "call whats-app facebook";
+}
+
+.call {
+    grid-area: call;
+}
+
+.whatsapp {
+    grid-area: whats-app;
+}
+
+.facebook {
+    grid-area: facebook;
+}
+
+h1{ 
+    grid-area: heading;
+}
+
+.navigation{ 
+    grid-area: main-nav; 
+    position: absolute;
+    z-index: 2;
+    height: max-content;
+    width: max-content;
+    top: 85px;
+    left: 62.7%;
+    background-color:  red;
+    padding: 5px 10px 5px 10px;
+    /* clip-path: inset(3px 3px 3px 3px); */
+
+   }
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+   /* padding-bottom: 10px; */
+    text-align: center;
+}
+
+.nav-blog {
+    padding-left: .6em;
+    border-left: 2px solid white;
+}
+
+.nav-home {
+    padding-right: .5em;
+}
+
+.shekinah{
+    color: ivory;
+    display: grid;
+    justify-items: center;
+    padding-bottom: 10px;
+}
+.sub-heading{
+    color: rgb(80, 36, 21);
+    font-size: .6em;
+}
+.about{
+    margin: 0;
+    border-right: 2px solid rgb(114, 107, 107);
+    color:rgb(216, 169, 51);
+    font-family: Calibri;
+    font-size: xx-large;
+    
+}
+h2.whos-text{
+    position: relative;
+    padding: 15px 0 0 90px;
+    color: rgb(136, 72, 9);
+    font-family:   'Lucida Sans Unicode';
+    font-size: larger;
+}
+p{
+    width: 320px;
+    padding: 0 0 0 20px;
+}
+.vision{
+    padding: 15px 0 0 20px;
+    font-size: large;
+    text-decoration: underline gray;
+}
+ul{
+    width: 320px;
+    padding: 5px 0 0 35px;
+}
+.profile{
+    font-size: large;
+    background-color: red;
+    color: whitesmoke;
+    width: 100px;
+    text-align: center;
+    margin: 30px 0 5px 20px;
+}
+.profile-ul figure{
+    width: 30%;
+    font-size: small;
+}
+#figure-div{
+    display: grid;
+    grid-template: "g1 g2"
+                   "g3 g4"
+                   "g5 g6"
+                   "g7 g8"
+                   "g9 g10"
+                   "g11 g12";
+    
+}
+figure{
+    padding: 10px 0 0 0;
+}
+
+.ministries{
+    padding-top: 20px;
+}
+
+.contact{
+    background-color: goldenrod;
+    color: black;
+    font-size: smaller;
+    width: 100px;
+    margin: 30px 0 0 120px;
+    text-align: center; 
+}
+
+.sekinah-mail{
+    padding: 5px 0 0 80px;
+}
+
+.contact-social-nav-sekinah{
+    width: 150px;
+    height: 30px;
+    padding: 0 0 0 120px;
+}
+.mag{
+    margin:5px 15px 0 0;
+}
+footer {
+    grid-area: footer;
+    background-color: rgb(165, 165, 165);
+    height: 170px;
+    margin: 30px 0 0 0;
+    width: 400px;
+}
+.footer-design{
+    padding: 0 0 10px 0;
+    height: 15px;
+    background-color: rgb(165, 165 165);
+    width: 400px;
+  
+}
+.footer-nav{
+    display: grid;
+    grid-template: "footer-home footer-about footer-blog";
+    padding-left: 55px;
+    width: 200px;
+}
+.footer-home{
+    grid-area: footer-home;
+    text-decoration: none;
+    border-right: 2px solid black;
+    width: 70%;
+    font-size: smaller;
+    margin-right: 50px;
+    color: white;
+}
+.footer-about{
+    grid-area: footer-about;
+    text-decoration: none;
+    border-right: 2px solid black;
+    width: 70%;
+    color: white;
+    margin-right: 50px;
+    font-size: smaller
+    
+}
+.footer-blog{
+    grid-area: footer-blog;
+    text-decoration: none;
+    color: white;
+    font-size: smaller
+}
+#social_nav_footer{
+    display: grid;
+    grid-template: "call whatssap faacebook";
+  justify-self: center;
+    width: 30%;
+    margin: 10px  0 0 120px;
+}
+
+.calll{
+    grid-area: call;
+    width: 20px;
+}
+
+.whatssap{
+    grid-area: whatssap;
+    width: 20px;
+}
+
+.faceboook{
+    grid-area: faacebook;
+    width: 20px;
+}
+
+.copywright{
+    font-size: x-small;
+    padding: 20px 0 10px 40px;
+    color: white;
+}
+
+@media screen and ( min-width:500px){
+    body{
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    .navigation{
+        left: 65%;
+    }
+    .navigation a {
+        text-decoration: none;
+        color: white;
+        font-size:1.5em;
+    }
+
+    main{
+        display: grid;
+        grid-template: "about about"
+                       "vision who"
+                       "what profile"
+                       "contact contact";
+
+    }
+
+    .about{
+        grid-area: about;
+    }
+
+    .who-we-are{
+        grid-area: who;
+    }
+
+    .vision-and-mission{
+        grid-area: vision;
+    }
+
+    .what-we-do{
+        grid-area: what;
+        margin-top: 35px;
+    }
+    
+    .profile1{
+        grid-area: profile;
+        margin-top: -25px;
+    }
+
+    .contact-us{
+        grid-area: contact;
+        position: absolute;
+        top: 800px;
+    }
+    footer{
+        width: 100%;
+    }
+    .footer-design{
+        width: 100%;
+    }
+
+    #social_nav_footer{
+    width: 35%;
+    padding: 20px 0 0 140px;
+    }
+
+    .footer-nav{
+    width: 70%;
+    padding: 0 0 0 120px;
+    }
+
+    .copywright{
+    padding: 20px 0 0 120px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    header,main, body{
+        width: 100%;
+        max-width: 100vw;
+    }
+    .navigation{
+        left: 86%;
+    }
+
+    
+    main{
+        display: grid;
+        grid-template: "about about about"
+                       "vision who what"
+                       " profile profile contact";
+
+    }
+    .who-we-are{
+        grid-area: who;
+        
+    }
+
+    .vision-and-mission{
+        grid-area: vision;
+        margin-top: 10px;
+    }
+
+    .what-we-do{
+        grid-area: what;
+        margin-top: 10px;
+    }
+
+    .contact-us{
+        left: 700px;
+        top: 480px;
+    }
+
+    .profile1{
+        grid-area: profile;
+        margin: 10px 0 0 250px;
+    }
+
+    #social_nav_footer{
+        width: 35%;
+        padding: 20px 0 0 230px;
+        }
+}

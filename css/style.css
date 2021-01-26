@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    max-width: 100vw;
+    width: 100%;
+}
+
+body{
+    display: grid;
+    grid-template: "header"
+                    "main" 
+                    "footer"
+                    ;
+    color: rgb(8, 8, 70)
+}
+
+
+header{
+    grid-area: header;
+    margin: 0 0 0px 0;
+    width: 100%;
+    height: max-content;
+    background-color: green;
+    display: grid;
+    grid-template: "social-nav" 
+                "heading"
+                "hero-image"
+                "text-over-hero"
+                "main-nav" 
+                ;
+}
+
+img{
+    width: 100%;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+#social_nav_header{ 
+    grid-area: social-nav;
+    width: 100px;
+    height: 30px;
+    display: grid;
+    justify-self: right;
+    align-content: center;
+    grid-template: 
+    "call whats-app facebook";
+}
+
+.call {
+    grid-area: call;
+}
+
+.whatsapp {
+    grid-area: whats-app;
+}
+
+.facebook {
+    grid-area: facebook;
+}
+
+h1{ 
+    grid-area: heading;
+}
+
+.hero{
+    grid-area: hero-image;
+}
+
+.div-over-hero {
+    grid-area: text-over-hero;
+    position: absolute;
+    top: 165px;
+    right: 5px;
+    z-index: 2;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+
+.navigation{ 
+    grid-area: main-nav; 
+    position: relative;
+    z-index: 2;
+    height: max-content;
+    width: max-content;
+    bottom: 25px;
+    left: 55%;
+    background-color: red;
+    padding: 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-blog {
+    padding-left: .6em;
+    border-left: 2px solid white;
+}
+
+.nav-about {
+    padding-right: .5em;
+}
+
+h1{
+    color: ivory;
+    display: grid;
+    justify-items: center;
+    padding-bottom: 10px;
+}
+
+.sub-heading{
+    color: orangered;
+    font-size: .6em;
+}
+
+.hero img{
+    border-radius: 10%;
+}
+
+main{
+    padding: 0 ;
+    grid-area: main;
+    display: grid;
+    grid-template: "fruits-HS       meeting-days"
+                "latest-news     latest-news"
+                "from-our-blog   from-our-blog"
+                "newsletter      newsletter"
+                /1.5fr             1fr
+                ; 
+    /* position: relative; */
+    height: max-content;
+}
+.fruits_HS{
+    grid-area: fruits-HS; 
+    padding: 0 1em;
+
+}
+
+.dove-picture img{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 280px;
+    left: 0px;
+    z-index: 2;
+    margin-left: 0;
+
+}
+
+.fruits-wrapper {
+    display: grid;
+    grid-template: 
+    "fruitsHs   fruitsHs"
+    "first6     last6"
+    /1fr        1fr
+    ;
+    column-gap: 1em;
+    padding-left: .7em;
+    position: absolute;
+    z-index: 3;
+}
+
+.fruits-hs-header{
+    grid-area: fruitsHs;
+    font-size: .6em;
+    color: red;
+}
+
+.fruits-wrapper ul li:before{
+    content: "";
+    margin-left: -7px;
+}
+
+.first-six-fruits {
+    grid-area: first6;
+    font-size: smaller
+}
+
+.last-six-fruits{
+    grid-area: last6;
+    font-size: smaller
+}
+
+.meeting_days{
+    grid-area: meeting-days;
+    padding:0 0 0 0;
+
+
+}
+
+.latest_news{
+    grid-area: latest-news;
+    padding: 30px 0 0 0;
+    
+}
+
+.newsletter{
+    grid-area: newsletter;
+
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(165, 165, 165);
+    height: 100%;
+    margin: 30px 0 0 0;
+}
+
+.meeting-days-header,.latest-news-header, .blog-header {
+    font-size: .7em;
+    color: seagreen;
+    text-decoration: underline gray;
+    text-align: center;
+}
+
+.meeting-days-header{
+    font-size: .8em;
+    padding: 0 4px 0 0;
+}
+
+.meeting-days-text{
+    padding-left: 13px;
+    font-size: smaller;
+    list-style-type: none;
+}
+
+
+ul{
+    font-size: .9em;
+}
+.padding-for-ul{
+    padding: 0 6px 0 35px;
+
+}
+.latest-news-header{
+    background-color: orangered;
+    text-decoration: none;
+    color: white;
+    width: 25%;
+    margin: 10px 0 0 120px;
+    height: 20px;
+    padding: 7px 0 0 0;
+}
+
+.from_our_blog{
+    grid-area: from-our-blog;
+
+}
+.blog-header{
+    background-color: rgba(107, 23, 23, 0.904);
+    color: wheat;
+    text-decoration: none;
+    width: 30%;
+    margin: 10px 0 0 20px;
+}
+
+.newsletter-header{
+    text-align: center;
+    font-size: .8em;
+    padding-top: 10px;
+}
+form{
+    padding-bottom: 20px;
+}
+input{
+    background-color: rgb(228, 224, 224);
+    border: none;
+    margin-top: 10px;
+}
+.name {
+    margin-left: 3px;
+}
+
+
+.footer-design{
+    padding: 0 0 10px 0;
+    height: 10%;
+}
+.footer-nav{
+    display: grid;
+    grid-template: "footer-home footer-about footer-blog";
+    padding-left: 40px;
+}
+.footer-home{
+    grid-area: footer-home;
+    text-decoration: none;
+    border-right: 2px solid black;
+    width: 70%;
+}
+.footer-about{
+    grid-area: footer-about;
+    text-decoration: none;
+    border-right: 2px solid black;
+    width: 70%;
+}
+.footer-blog{
+    grid-area: footer-blog;
+    text-decoration: none;
+}
+#social_nav_footer{
+    display: grid;
+    grid-template: "call whatssap faacebook";
+    justify-self: center;
+    padding:10px 0 0 110px;
+    width: 43%;
+    
+}
+.calll{
+    grid-area: call;
+}
+.whatssap{
+    grid-area: whatssap;
+}
+.faceboook{
+    grid-area: faacebook;
+}
+.copywright{
+    font-size: x-small;
+    padding: 5px 0 10px 40px;
+    color: white;
+}
+@media screen and (min-width:500px){
+    body{
+        width: 100%;
+        max-width: 100vw;
+
+    }
+    .navigation{
+        left: 65%;
+    }
+    .navigation a {
+        text-decoration: none;
+        color: white;
+        font-size:1.5em;
+    }
+    main{
+        display: grid;
+        grid-template: "fruits meeting" 
+                    "latest latest"
+                    "blog   subscribe" ;
+                    
+    }
+    .fruits_HS{
+        grid-area: fruits;
+    }
+
+    .meeting_days{
+        grid-area: meeting;
+    }
+
+    .latest_news{
+        grid-area: latest;
+    }
+
+    .from_our_blog{
+        grid-area: blog;
+        width: 90%;
+        margin-top: 30px ;
+    }
+
+    .newsletter{
+        grid-area: subscribe;
+        /* margin-left: -50px; */
+        margin-top: 30px ;
+    }
+
+    .dove-picture img{
+        top: 530px;
+    }
+
+    .latest-news-header {
+        margin-left: 250px;
+    }
+    .footer-nav{
+        padding: 15px 0 0 150px;
+    }
+    #social_nav_footer{
+        padding: 15px 0 0 290px;
+        width: 39%;
+    }
+    .copywright{
+        padding: 15px 0 0 150px;
+    }
+}
+
+@media screen and (min-width:1100px){
+   
+    .hero img{
+        border-radius: 10%;
+        height: 500px;
+    }
+
+    .div-over-hero {
+        top: 280px;
+        right: 160px;
+        font-size: 2.5em;
+    }
+
+    .navigation{
+        left: 78%;
+    }
+
+    main{
+        display: grid;
+        grid-template: "fruits latest meeting" 
+                       "blog blog  subscribe" ;
+    }
+
+    .latest_news{
+        margin: -38px 0 0 90px;
+    }
+
+    .from_our_blog{
+        width: 90%;
+        margin: 30px 0 0 -8px ;
+    }
+
+    .meeting-days-text{
+        padding: 0;
+        margin: 0;
+    
+    }
+
+    .meeting-days-header{
+        font-size: .8em;
+        padding: 0 0 0 0;
+        text-align: left;
+    }
+
+    .newsletter-header{
+        text-align: left;
+    }
+
+    #social_nav_footer{
+        display: grid;
+        grid-template: "call whatssap faacebook";
+        justify-self: center;
+        padding:30px 0 0 430px;
+        width: 43%;
+    }
+}
+
+
